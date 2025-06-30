@@ -1,0 +1,161 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Typography" />
+
+# Typography
+
+Our typography system is implemented as **Tailwind CSS utility classes** that use design tokens for font size, weight, line height, and letter spacing.
+
+Use classes like `.text-t1`, `.text-t2`, `.text-t3`, etc., to apply these typography styles throughout your app.
+
+Below is a live preview of each typography utility class in action:
+
+<div className="border rounded border-neutral-200 border-rounded shadow-lg p-4 !my-8">
+  <p className="!text-t1 !font-sans">text-t1 — Hero Heading</p>
+  <p className="!text-t2 !font-sans">text-t2 — Section Heading</p>
+  <p className="!text-t3 !font-sans">text-t3 — Subheading</p>
+  <p className="!text-t4 !font-sans">text-t4 — Content Heading</p>
+  <p className="!text-t5 !font-sans">text-t5 — Label</p>
+  <p className="!text-t6 !font-sans">text-t6 — Body Text</p>
+  <p className="!text-t6-italic !font-sans">text-t6-italic — Emphasis</p>
+  <p className="!text-t6-regular !font-sans">text-t6-regular — Regular Body</p>
+  <p className="!text-t7 !font-sans">text-t7 — Caption</p>
+  <p className="!text-t8 !font-sans">text-t8 — Small Label</p>
+  <p className="!text-t10 !font-sans">text-t9 — Microcopy</p>
+</div>
+
+## Typography Scale
+
+Our typography system supports a responsive and accessible interface. Each text token uses custom properties (CSS variables) that define:
+
+- Font size
+- Line height
+- Letter spacing
+- Font weight
+
+## Tokens Overview
+
+<table>
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Size</th>
+      <th>Line Height</th>
+      <th>Weight</th>
+      <th>Letter Spacing</th>
+      <th>Responsive</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>--text-t1</code>
+      </td>
+      <td>3.875rem → 3.25rem</td>
+      <td>1.2em → 1.4em</td>
+      <td>bold</td>
+      <td>-0.125rem</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>
+        <code>--text-t2</code>
+      </td>
+      <td>2rem → 2.5rem</td>
+      <td>1.2em</td>
+      <td>bold</td>
+      <td>-0.019rem</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>
+        <code>--text-t3</code>
+      </td>
+      <td>1.75rem → 2rem</td>
+      <td>1.3em → 1.4em</td>
+      <td>bold</td>
+      <td>-0.019rem</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>
+        <code>--text-t4</code>
+      </td>
+      <td>1.5rem</td>
+      <td>1.4em</td>
+      <td>semibold</td>
+      <td>0</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>
+        <code>--text-t5</code>
+      </td>
+      <td>1.25rem</td>
+      <td>1.4em</td>
+      <td>semibold</td>
+      <td>0</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>
+        <code>--text-t6</code>
+      </td>
+      <td>1.125rem</td>
+      <td>1.2em</td>
+      <td>medium</td>
+      <td>0</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>
+        <code>--text-t6-italic</code>
+      </td>
+      <td>1.125rem</td>
+      <td>1.3em</td>
+      <td>medium</td>
+      <td>0</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>
+        <code>--text-t6-regular</code>
+      </td>
+      <td>1.125rem</td>
+      <td>1.4em</td>
+      <td>regular</td>
+      <td>-0.019</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>
+        <code>--text-t7</code>
+      </td>
+      <td>0.938rem</td>
+      <td>1.4em</td>
+      <td>regular</td>
+      <td>-0.019</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>
+        <code>--text-t8</code>
+      </td>
+      <td>0.813rem</td>
+      <td>1em</td>
+      <td>semibold</td>
+      <td>Item</td><td>1</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>
+        <code>--text-t9</code>
+      </td>
+      <td>0.75rem</td>
+      <td>1.1em</td>
+      <td>regular</td>
+      <td>0</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>

@@ -12,6 +12,7 @@ export const resolvers = {
   Query: {
     moodEntries: () => {
       const data = readData();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       return data.moodEntries.map((entry: any) => ({
         ...entry,
       }));

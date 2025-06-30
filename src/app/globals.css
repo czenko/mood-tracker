@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: linear-gradient(180deg, #f5f5ff 72.99%, #e0e0ff 100%) #ffffff;
   --foreground: #171717;
+  --font-sans: "Reddit Sans", Arial, Helvetica, sans-serif;
+
+  /* Text sizes */
+  --t1: 2.875rem;
+  --t1-line-height: 1.2em;
+  --t1-letter-spacing: -0.125rem;
+  --t1-font-weight: bold;
+
+  --t2: 2rem;
+  --t2-line-height: 1.2em;
+  --t2-letter-spacing: -0.019rem;
+  --t2-font-weight: bold;
+
+  --t3: 1.75rem;
+  --t3-line-height: 1.3em;
+  --t3-letter-spacing: -0.019rem;
+  --t3-font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --t1: 3.25rem;
+    --t1-line-height: 1.4em;
+
+    --t2: 2.5rem;
+    --t2-line-height: 1.2em;
+
+    --t3: 2rem;
+    --t3-line-height: 1.4em;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  /* Neutral */
+  --color-neutral-0: #ffffff;
+  --color-neutral-200: #cbcdd0;
+  --color-neutral-300: #9393b7;
+  --color-neutral-600: #57577b;
+  --color-neutral-900: #21214d;
+
+  /* Blue */
+  --color-blue-100: #e0e6fa;
+  --color-blue-200: #c7d3f7;
+  --color-blue-300: #89caff;
+  --color-blue-600: #4865db;
+  --color-blue-700: #2a4cd5;
+
+  /* Red */
+  --color-red-300: #ff9b99;
+  --color-red-700: #e60013;
+
+  /* Additional */
+  --color-green-300: #89e780;
+  --color-amber-300: #ffc97c;
+  --color-indigo-200: #b8b1ff;
+
+  --text-t1: var(--t1);
+  --text-t1--line-height: var(--t1-line-height);
+  --text-t1--letter-spacing: var(--t1-letter-spacing);
+  --text-t1--font-weight: var(--t1-font-weight);
+
+  --text-t2: var(--t2);
+  --text-t2--line-height: var(--t2-line-height);
+  --text-t2--letter-spacing: var(--t2-letter-spacing);
+  --text-t2--font-weight: var(--t2-font-weight);
+
+  --text-t3: var(--t3);
+  --text-t3--line-height: var(--t3-line-height);
+  --text-t3--letter-spacing: var(--t3-letter-spacing);
+  --text-t3--font-weight: var(--t3-font-weight);
+
+  --text-t4: 1.5rem;
+  --text-t4--line-height: 1.4em;
+  --text-t4--letter-spacing: 0;
+  --text-t4--font-weight: semibold;
+
+  --text-t5: 1.25rem;
+  --text-t5--line-height: 1.4em;
+  --text-t5--letter-spacing: 0;
+  --text-t5--font-weight: semibold;
+
+  --text-t6: 1.125rem;
+  --text-t6--line-height: 1.2em;
+  --text-t6--letter-spacing: 0;
+  --text-t6--font-weight: medium;
+
+  --text-t6-italic: 1.125rem;
+  --text-t6-italic--line-height: 1.3em;
+  --text-t6-italic--letter-spacing: 0;
+  --text-t6-italic--font-weight: medium;
+  --text-t6-italic--font-style: italic;
+
+  --text-t6-regular: 1.125rem;
+  --text-t6-regular--line-height: 1.4em;
+  --text-t6-regular--letter-spacing: -0.019rem;
+  --text-t6-regular--font-weight: regular;
+
+  --text-t7: 0.938rem;
+  --text-t7--line-height: 1.4em;
+  --text-t7--letter-spacing: -0.019;
+  --text-t7--font-weight: regular;
+
+  --text-t8: 0.813rem;
+  --text-t8--line-height: 1em;
+  --text-t8--letter-spacing: 0;
+  --text-t8--font-weight: semibold;
+
+  --text-t9: 0.75rem;
+  --text-t9--line-height: 1.1em;
+  --text-t9--letter-spacing: 0;
+  --text-t9--font-weight: regular;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
