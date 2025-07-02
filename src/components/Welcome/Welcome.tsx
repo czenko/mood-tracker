@@ -15,7 +15,7 @@ export default function Welcome({ firstName = "World" }: WelcomeProps) {
   const currentDate = `${weekday}, ${month} ${dayWithSuffix}, ${year}`;
 
   return (
-    <div className="py-16 text-center flex flex-col gap-2.5">
+    <div className="flex flex-col text-center py-12 md:gap-2.5 gap-4 lg:py-16">
       <p className="text-t3 text-blue-600">Hello, {firstName}!</p>
       <h1 className="text-t1 text-neutral-900">How are you feeling today?</h1>
       <p className="text-t6 text-neutral-600">{currentDate}</p>
