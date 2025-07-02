@@ -25,3 +25,19 @@ export const Primary: Story = {
     onClick: fn(),
   },
 };
+
+export const PrimaryDisabled: Story = {
+  args: {
+    children: "Log today's mood",
+    onClick: fn(),
+    disabled: true,
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    children: "Upload",
+    onClick: fn(),
+    variant: "secondary",
+  },
+};
