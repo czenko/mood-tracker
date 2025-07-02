@@ -15,6 +15,7 @@
   "dependencies": {
     "@apollo/client": "^3.13.8",
     "apollo-server-micro": "^3.13.0",
+    "class-variance-authority": "^0.7.1",
     "graphql": "^16.11.0",
     "graphql-tag": "^2.12.6",
     "next": "15.3.4",
