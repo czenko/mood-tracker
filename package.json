@@ -14,6 +14,8 @@
   },
   "dependencies": {
     "@apollo/client": "^3.13.8",
+    "@supabase/ssr": "^0.6.1",
+    "@supabase/supabase-js": "^2.50.3",
     "apollo-server-micro": "^3.13.0",
     "class-variance-authority": "^0.7.1",
     "graphql": "^16.11.0",
