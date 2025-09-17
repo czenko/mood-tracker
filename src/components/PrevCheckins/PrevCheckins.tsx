@@ -4,7 +4,7 @@ import ArrowRight from "./ArrowRight";
 interface PrevCheckinsProps {
   hasData: boolean;
   variant: "mood" | "sleep";
-  state: "default" | "increase" | "decrease";
+  state: "neutral" | "increase" | "decrease";
 }
 
 const prevCheckinsVariants = cva("text-t7 text-neutral-900", {
@@ -19,14 +19,14 @@ const prevCheckinsVariants = cva("text-t7 text-neutral-900", {
 export default function PrevCheckins({
   hasData = false,
   variant = "mood",
-  state = "default",
+  state = "neutral",
 }: PrevCheckinsProps) {
   const noDataCopy = {
     mood: "Log 5 check-ins to see your average mood.",
     sleep: "Track 5 nights to view average sleep.",
   };
   const changeCopy = {
-    default: "Same as",
+    neutral: "Same as",
     increase: "Increase from",
     decrease: "Decrease from",
   };

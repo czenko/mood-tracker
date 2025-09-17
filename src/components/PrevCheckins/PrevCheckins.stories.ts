@@ -26,6 +26,6 @@ export const Primary: Story = {
   args: {
     hasData: true,
     variant: "mood",
-    state: "default",
+    state: "neutral",
   },
 };

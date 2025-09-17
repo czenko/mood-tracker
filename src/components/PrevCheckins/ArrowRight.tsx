@@ -4,19 +4,19 @@ interface ArrowRightProps {
   width?: number;
   height?: number;
   fill?: string;
-  variant?: "default" | "increase" | "decrease";
+  variant?: "neutral" | "increase" | "decrease";
 }
 
 const arrowRightVariants = cva("inline-block", {
   variants: {
     variant: {
-      default: "rotate-0",
+      neutral: "rotate-0",
       increase: "-rotate-45",
       decrease: "rotate-45",
     },
   },
   defaultVariants: {
-    variant: "default",
+    variant: "neutral",
   },
 });
 
@@ -24,7 +24,7 @@ const ArrowRight: React.FC<ArrowRightProps> = ({
   width = 15,
   height = 16,
   fill = "#21214D",
-  variant = "default",
+  variant = "neutral",
 }) => {
   return (
     <svg
