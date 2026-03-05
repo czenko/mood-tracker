@@ -16,7 +16,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="h-screen w-screen max-w-[1170px] lg:mx-auto">
+    <div className="overflow-hidden h-screen w-screen max-w-[1170px] lg:mx-auto">
       <Welcome />
       <div
         className={twMerge(
