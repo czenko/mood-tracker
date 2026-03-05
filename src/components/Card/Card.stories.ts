@@ -12,7 +12,7 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {},
-  args: { onClick: fn() },
+  args: {},
 } satisfies Meta<typeof Card>;
 
 export default meta;
