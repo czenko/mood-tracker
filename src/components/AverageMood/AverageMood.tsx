@@ -1,26 +1,28 @@
 import { twMerge } from "tailwind-merge";
 import PrevCheckins from "../PrevCheckins/PrevCheckins";
+import { MoodValue } from "@/app/types";
+import MoodIcon from "../MoodIcon/MoodIcon";
 
 const MOOD = {
-  0: "Very Sad",
-  1: "Sad",
-  2: "Neutral",
-  3: "Happy",
-  4: "Very Happy",
+  [-2]: "Very Sad",
+  [-1]: "Sad",
+  0: "Neutral",
+  1: "Happy",
+  2: "Very Happy",
 };
 
 const COLOR = {
-  0: "bg-red-300",
-  1: "bg-indigo-200",
-  2: "bg-blue-300",
-  3: "bg-green-300",
-  4: "bg-amber-300",
+  [-2]: "bg-red-300",
+  [-1]: "bg-indigo-200",
+  0: "bg-blue-300",
+  1: "bg-green-300",
+  2: "bg-amber-300",
 };
 
 interface AverageMoodProps extends React.BaseHTMLAttributes<HTMLDivElement> {
   className?: string;
-  current?: 0 | 1 | 2 | 3 | 4;
-  prev?: 0 | 1 | 2 | 3 | 4;
+  current?: MoodValue;
+  prev?: MoodValue;
 }
 
 const Circle = ({ className }: { className: string }) => (
@@ -49,7 +51,6 @@ export default function AverageMood({
         : "neutral"
     : undefined;
 
-  // Dynamic props depending on whether we have data
   const containerColor = hasData ? COLOR[current!] : "bg-blue-100";
   const heading = hasData ? MOOD[current!] : "Keep tracking!";
   const prevCheckinsProps = hasData ? { hasData, state: trend } : { hasData };
@@ -66,7 +67,12 @@ export default function AverageMood({
       <Circle className="-top-1/4 -right-1/2" />
       <Circle className="top-0 right-[-60%] delay-150" />
 
-      <h3 className="text-neutral-900 text-t4 relative z-10">{heading}</h3>
+      <h3 className="text-neutral-900 text-t4 relative z-10 flex flex-wrap items-center gap-3">
+        {current !== undefined && (
+          <MoodIcon className="inline-block" mood={current} />
+        )}
+        {heading}
+      </h3>
       <PrevCheckins {...prevCheckinsProps} />
     </div>
   );

@@ -12,9 +12,11 @@ const meta = {
   argTypes: {
     current: {
       control: { type: "select" },
+      options: [undefined, -2, -1, 0, 1, 2],
     },
     prev: {
       control: { type: "select" },
+      options: [undefined, -2, -1, 0, 1, 2],
     },
   },
   args: {},
