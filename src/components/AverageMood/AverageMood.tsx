@@ -68,7 +68,9 @@ export default function AverageMood({
       <Circle className="top-0 right-[-60%] delay-150" />
 
       <h3 className="text-neutral-900 text-t4 relative z-10 flex flex-wrap items-center gap-3">
-        {hasData && <MoodIcon className="inline-block" mood={current} />}
+        {hasData && current !== undefined && (
+          <MoodIcon className="inline-block" mood={current} />
+        )}
         {heading}
       </h3>
       <PrevCheckins {...prevCheckinsProps} />
