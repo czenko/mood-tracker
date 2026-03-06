@@ -2,12 +2,12 @@ import { cva } from "class-variance-authority";
 import ArrowRight from "./ArrowRight";
 
 interface PrevCheckinsProps {
-  hasData: boolean;
-  variant: "mood" | "sleep";
-  state: "neutral" | "increase" | "decrease";
+  hasData?: boolean;
+  variant?: "mood" | "sleep";
+  state?: "neutral" | "increase" | "decrease";
 }
 
-const prevCheckinsVariants = cva("text-t7 text-neutral-900", {
+const prevCheckinsVariants = cva("z-10 text-t7 text-neutral-900", {
   variants: {
     variant: {
       mood: "",

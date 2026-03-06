@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Welcome, Card } from "@/components";
+import { Welcome, Card, AverageMood } from "@/components";
 import { twMerge } from "tailwind-merge";
 import fadeInAnimation from "./styles/fadeInAnimation";
 
@@ -29,6 +29,7 @@ export default function Home() {
             Average Mood{" "}
             <span className="text-t7 text-neutral-600">(Last 5 Check-ins)</span>
           </h2>
+          <AverageMood />
           <h2 className="text-t5 text-neutral-900">
             Average Sleep{" "}
             <span className="text-t7 text-neutral-600">(Last 5 Check-ins)</span>

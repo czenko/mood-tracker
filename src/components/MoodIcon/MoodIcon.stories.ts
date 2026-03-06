@@ -1,23 +1,28 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import Card from "./Card";
+import MoodIcon from "./MoodIcon";
 
 const meta = {
-  title: "Dashboard/Card",
-  component: Card,
+  title: "Dashboard/MoodIcon",
+  component: MoodIcon,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    mood: {
+      control: { type: "select" },
+      options: [-2, -1, 0, 1, 2],
+    },
+  },
   args: {},
-} satisfies Meta<typeof Card>;
+} satisfies Meta<typeof MoodIcon>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    children: "Average Mood (Last 5 Check-ins)",
+    mood: -2,
   },
 };
