@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Welcome, Card, AverageMood } from "@/components";
+import { Welcome, Card, AverageMood, AverageSleep } from "@/components";
 import { twMerge } from "tailwind-merge";
 import fadeInAnimation from "./styles/fadeInAnimation";
 
@@ -25,15 +25,24 @@ export default function Home() {
         )}
       >
         <Card className="lg:w-[calc(33.333%-32px)]">
-          <h2 className="text-t5 text-neutral-900">
-            Average Mood{" "}
-            <span className="text-t7 text-neutral-600">(Last 5 Check-ins)</span>
-          </h2>
-          <AverageMood />
-          <h2 className="text-t5 text-neutral-900">
-            Average Sleep{" "}
-            <span className="text-t7 text-neutral-600">(Last 5 Check-ins)</span>
-          </h2>
+          <div className="flex flex-col gap-3">
+            <h2 className="text-t5 text-neutral-900">
+              Average Mood{" "}
+              <span className="text-t7 text-neutral-600">
+                (Last 5 Check-ins)
+              </span>
+            </h2>
+            <AverageMood />
+          </div>
+          <div className="flex flex-col gap-3">
+            <h2 className="text-t5 text-neutral-900">
+              Average Sleep{" "}
+              <span className="text-t7 text-neutral-600">
+                (Last 5 Check-ins)
+              </span>
+            </h2>
+            <AverageSleep />
+          </div>
         </Card>
         <Card className="lg:w-[calc(66.667%-32px)] p-8">
           <h2 className="text-t3">Mood and sleep trends</h2>

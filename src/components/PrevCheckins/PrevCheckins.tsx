@@ -7,11 +7,11 @@ interface PrevCheckinsProps {
   state?: "neutral" | "increase" | "decrease";
 }
 
-const prevCheckinsVariants = cva("z-10 text-t7 text-neutral-900", {
+const prevCheckinsVariants = cva("z-10 text-t7", {
   variants: {
     variant: {
-      mood: "",
-      sleep: "opacity-70",
+      mood: "text-neutral-900",
+      sleep: "text-neutral-0 opacity-70",
     },
   },
 });
@@ -33,16 +33,17 @@ export default function PrevCheckins({
 
   if (!hasData) {
     return (
-      <p className="text-t7 text-neutral-900 opacity-70">
-        {noDataCopy[variant]}
-      </p>
+      <p className="z-10 text-t7 text-neutral-900">{noDataCopy[variant]}</p>
     );
   }
 
   return (
     <p className={prevCheckinsVariants({ variant })}>
       <span className="inline-block mr-2">
-        <ArrowRight variant={state} />
+        <ArrowRight
+          fill={variant === "sleep" ? "#FFFFFF" : undefined}
+          variant={state}
+        />
       </span>
       <span>{changeCopy[state]} the previous 5 check-ins</span>
     </p>
