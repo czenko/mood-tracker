@@ -57,8 +57,8 @@ export default function AverageSleep({
         className
       )}
     >
-      <Circle className="-top-1/4 -right-1/2" />
-      <Circle className="top-0 right-[-60%] delay-150" />
+      <Circle className="-top-1/4 right-[-144px]" />
+      <Circle className="top-0 right-[-175] delay-150" />
 
       <h3
         className={

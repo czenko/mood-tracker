@@ -64,8 +64,8 @@ export default function AverageMood({
         className
       )}
     >
-      <Circle className="-top-1/4 -right-1/2" />
-      <Circle className="top-0 right-[-60%] delay-150" />
+      <Circle className="-top-1/4 right-[-144px]" />
+      <Circle className="top-0 right-[-175] delay-150" />
 
       <h3 className="text-neutral-900 text-t4 relative z-10 flex flex-wrap items-center gap-3">
         {hasData && current !== undefined && (
