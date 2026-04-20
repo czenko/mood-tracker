@@ -1,23 +1,7 @@
 import { twMerge } from "tailwind-merge";
 import PrevCheckins from "../PrevCheckins/PrevCheckins";
-import { MoodValue } from "@/app/types";
+import { MoodValue, MOOD, COLOR } from "@/app/types";
 import MoodIcon from "../MoodIcon/MoodIcon";
-
-const MOOD = {
-  [-2]: "Very Sad",
-  [-1]: "Sad",
-  0: "Neutral",
-  1: "Happy",
-  2: "Very Happy",
-};
-
-const COLOR = {
-  [-2]: "bg-red-300",
-  [-1]: "bg-indigo-200",
-  0: "bg-blue-300",
-  1: "bg-green-300",
-  2: "bg-amber-300",
-};
 
 interface AverageMoodProps extends React.BaseHTMLAttributes<HTMLDivElement> {
   className?: string;
